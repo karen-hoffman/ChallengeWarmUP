@@ -90,10 +90,8 @@ public class PostService {
 			if(post.getUrl_image() == null || post.getUrl_image().isBlank()) {
 				post.setUrl_image("https://miro.medium.com/max/720/1*W35QUSvGpcLuxPo3SRTH4w.png");
 			} else {
-				for (int i = 0; i < post.getUrl_image().length(); i++) {
-					if (!post.getUrl_image().endsWith(".png") && !post.getUrl_image().endsWith(".jpg")) {
-						post.setUrl_image("https://miro.medium.com/max/720/1*W35QUSvGpcLuxPo3SRTH4w.png");
-					}
+				if (!post.getUrl_image().endsWith(".png") && !post.getUrl_image().endsWith(".jpg")) {
+					post.setUrl_image("https://miro.medium.com/max/720/1*W35QUSvGpcLuxPo3SRTH4w.png");
 				}
 			}
 			
